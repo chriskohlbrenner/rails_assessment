@@ -12,19 +12,28 @@ From any post I should be able to both see all the comments and add a comment my
 Questions to be answered in the assesment.txt file.
 
 How does rails communicate with the database?  Please be thorough in discussing all the config files and pieces of rails necessary to communicate with the database.
-
+  Through ActiveRecord, which is an ORM (object-relational manager) that enables Rails to query the database with Ruby-esque syntax rather than explicit SQL commands.
 What is a resource?
-
+  A resource is an object that can be made accessible by an application (through URI). Its name appears in the model (logic of how the object works) and controller (which actions are necessary to use the object).
 What are the standard RESTful routes for a resource?
-
+  http://guides.rubyonrails.org/routing.html#crud-verbs-and-actions
 What is CRUD?
-
+  CRUD is "create, read, update, delete" (basic functions of storing/displaying resources in web applications).
 What is REST?
-
+  Representational State Transfer
+  Roy Fielding, 2000
+  Used to develope http 1.1 spec
+  A guideline for Rails (it's possible to work outside REST constraints)
+  Interface between client-server relationship
+  Stateless
 What is the difference between CRUD and REST?
-
+  http://guides.rubyonrails.org/routing.html#crud-verbs-and-actions
+  CRUD is the functions necessary for a given resource, REST is a way of implementing routes to those operations that is common in Rails.
 Describe the flow of a request from a users browser through the rails stack and back.
-
+  Browser makes request, goes through Rails router (config/routes.rb), passed to controller action, depends on model/database to instantiate and call methods on objects, back to controller, renders/redirects to view, back to browser.
+  Helpful picture at 0:55 here:
+  https://flatiron-school-training.s3.amazonaws.com/ruby/lectures/lecture5/rails.mvc.mp4
 What are HTTP verbs?
-
+  Get, post, patch/put, delete. These are part of routes/controller actions and appear in html forms. Browsers only support get and post.
 Why do we use migrations.
+  To alter database easily over time. Can write a simple change (add column, create table) as a migration and roll up or down as necessary.
