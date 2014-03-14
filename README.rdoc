@@ -1,1 +1,5 @@
 Check assessment.txt
+
+Created blog using rails g scaffold post, added comments to posts.
+Previous version without rails g scaffold here:
+https://github.com/chriskohlbrenner/rails_assessment_without_scaffold
